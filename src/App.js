@@ -3,6 +3,7 @@ import './App.css';
 import About from './components/About/About';
 import Inventory from './components/Inventory/Inventory';
 import Orders from './components/Orders/Orders';
+import PageNotFound from './components/PageNotFound/PageNotFound';
 import Shop from './components/Shop/Shop';
 import Main from './layout/Main';
 import { productsAndCartLoader } from './loaders/productsAndCartLoader';
@@ -30,6 +31,10 @@ function App() {
         {
           path: '/about',
           element: <About></About>
+        },
+        {
+          path: '/*',
+          element: <PageNotFound></PageNotFound>
         }
       ]
     }

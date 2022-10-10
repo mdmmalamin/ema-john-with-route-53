@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
-import { addToDb, getStoredCart } from '../../utilities/fakedb';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Link, useLoaderData } from 'react-router-dom';
+import { addToDb, deleteShoppingCart, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Shop = () => {
-const {products} = useLoaderData(); // return { products: products, initialCart: initialCart };
+const { products } = useLoaderData(); // return { products: products, initialCart: initialCart };
     const [cart, setCart] = useState([]);
 
+    const clearCart = () => {
+        setCart([]);
+        deleteShoppingCart();
+    }
 
     useEffect( () =>{
         const storedCart = getStoredCart();
@@ -47,14 +53,23 @@ const {products} = useLoaderData(); // return { products: products, initialCart:
             <div className="products-container">
                 {
                     products.map(product=><Product 
-                        key={product.id}
-                        product={product}
-                        handleAddToCart={handleAddToCart}
+                            key={product.id}
+                            product={product}
+                            handleAddToCart={handleAddToCart}
                         ></Product>)
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart
+                    cart={cart}
+                    clearCart={clearCart}
+                >
+                    <Link to='/orders'>
+                        <button className='btn-order'>
+                            Review Order <span><FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></span>
+                        </button>
+                    </Link>
+                </Cart>
             </div>
         </div>
     );
