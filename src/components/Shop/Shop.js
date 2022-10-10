@@ -6,7 +6,7 @@ import Product from '../Product/Product';
 import './Shop.css';
 
 const Shop = () => {
-    const products = useLoaderData();
+const {products} = useLoaderData(); // return { products: products, initialCart: initialCart };
     const [cart, setCart] = useState([]);
 
 
