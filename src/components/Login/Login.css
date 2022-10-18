@@ -1,0 +1,101 @@
+.login-container {
+    width: 500px;
+    height: 600px;
+    margin: 20px auto;
+    border: 1px solid #95A0A7;;
+    border-radius: 8px;
+}
+
+.login-form {
+    margin-left: 42px;;
+}
+
+.login-title {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    letter-spacing: 0.0025em;
+    color: #2A414F;
+    text-align: center;
+}
+
+.login-control {
+    margin: 20px auto;
+}
+
+.login-control label {
+    display: block;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    margin-bottom: 10px;
+    color: #2A414F
+}
+
+.login-control input {
+    width: 400px;
+    height: 55px;
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding-left: 10px;
+}
+
+.btn-submit {
+    width: 415px;
+    height: 55px;
+    margin-top: 20px;
+    background: rgba(255, 153, 0, 0.3);
+    border-radius: 5px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+    color: #0E161A;
+    border: none;
+    padding-left: 10px;
+}
+
+.btn-submit:hover {
+    background: rgba(255, 153, 0, 0.6);
+}
+
+.new-to-ema {
+    text-align: center;
+}
+
+.new-to-ema a {
+    color: rgba(255, 153, 0, 1);
+}
+
+.or {
+    margin: 30px 247px;
+    font-family: 'Lato';
+    font-size: 17px;
+    color: #95A0A7;
+}
+
+.google-login {
+    width: 415px;
+    height: 55px;
+    background-color: white;
+    border: 1px solid #95A0A7;;
+    border-radius: 8px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    color: #0E161A;
+    margin-left: 42px;
+}
+
+.login-icon {
+    width: 32px;
+}
