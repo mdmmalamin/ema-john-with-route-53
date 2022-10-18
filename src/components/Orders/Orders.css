@@ -5,3 +5,7 @@
 .no-items {
     /* margin: 20% auto; */
 }
+
+.cart-container {
+    height: 100%;
+}
