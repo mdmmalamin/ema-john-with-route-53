@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
+import CheckOut from './components/CheckOut/CheckOut';
 import Inventory from './components/Inventory/Inventory';
 import Login from './components/Login/Login';
 import Orders from './components/Orders/Orders';
@@ -9,6 +10,7 @@ import Shop from './components/Shop/Shop';
 import Signup from './components/Signup/Signup';
 import Main from './layout/Main';
 import { productsAndCartLoader } from './loaders/productsAndCartLoader';
+import PrivateRoute from './routes/PrivateRoute';
 
 function App() {
   const router = createBrowserRouter([
@@ -27,8 +29,12 @@ function App() {
           element: <Orders></Orders>
         },
         {
+          path: '/checkout',
+          element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>
+        },
+        {
           path: '/inventory',
-          element: <Inventory></Inventory>
+          element: <PrivateRoute><Inventory></Inventory></PrivateRoute>
         },
         {
           path: '/about',
