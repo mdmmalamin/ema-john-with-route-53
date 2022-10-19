@@ -1,7 +1,11 @@
 .signup-container {
     width: 500px;
-    height: 700px;
+    height: 800px;
     margin: 20px auto;
     border: 1px solid #95A0A7;;
     border-radius: 8px;
+}
+
+.text-error {
+    color: rgb(228, 61, 61);
 }
